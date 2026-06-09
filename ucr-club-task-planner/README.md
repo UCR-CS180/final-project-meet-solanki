@@ -6,14 +6,18 @@ UCR Club Task Planner is a terminal app for tracking simple club tasks. It can a
 
 ## Project Files
 
-- Source code: `src/`
-- Tests: `tests/`
-- Requirement/design documents: `FUNCTIONALITY.md` and `CONTRACT.md`
-- Demo video: TODO add public video link before creating the GitHub release
+| Path | Description |
+| --- | --- |
+| `src/` | Source code directory |
+| `tests/` | Test directory |
+| `FUNCTIONALITY.md` | Requirement specification |
+| `CONTRACT.md` | Design document with component contracts |
+
+## Demo Video
+
+https://drive.google.com/file/d/1dBnb8GxUDdGqIZK52vLNNxlwnS4jZ1JG/view?usp=sharing
 
 ## Setup
-
-Create a virtual environment and install dependencies:
 
 ```bash
 python3 -m venv .venv
@@ -21,13 +25,14 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file with your Gemini API key:
+Create a local `.env` file:
 
 ```text
 GOOGLE_API_KEY=your_key_here
+SPREADSHEET_NAME=ucr-club-task-planner
 ```
 
-For Google Sheets storage, keep `service_account.json` in the project root and share the spreadsheet with the service account email.
+Keep `service_account.json` in this project folder and share the Google Sheet with the service account email.
 
 ## How To Run
 
@@ -39,7 +44,7 @@ python -m src.interface.cli
 ## How To Test
 
 ```bash
-python3 -m pytest tests/ -q
+python -m pytest tests/ -q
 ```
 
 ## Usage Examples
